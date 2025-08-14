@@ -87,9 +87,12 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
 /* Lightbox */
 .lightbox { position: fixed; inset: 0; background: rgba(0,0,0,0.75); display: none; align-items: center; justify-content: center; z-index: 9999; }
 .lightbox.open { display:flex; }
-.lightbox-content { position: relative; max-width: 90vw; max-height: 82vh; display: grid; place-items: center; padding: 8px; background: #ffffff; border-radius: 10px; box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
-.lightbox-img { width:auto; height:auto; max-width: min(90vw, 1100px); max-height: 80vh; object-fit: contain; display:block; border-radius:6px; background:#ffffff; }
-.lightbox-close, .lightbox-prev, .lightbox-next { position:absolute; background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; color: #0f172a; width: 40px; height: 40px; border-radius: 999px; display: grid; place-items: center; cursor: pointer; }
+/* Make the content box wider on mobile and ensure arrows have room */
+.lightbox-content { position: relative; width: min(96vw, 1100px); max-width: 96vw; max-height: 86vh; display: grid; place-items: center; padding: 8px; background: #ffffff; border-radius: 10px; box-shadow: 0 12px 30px rgba(0,0,0,0.35); }
+/* Ensure image always fits the box while keeping aspect ratio */
+.lightbox-img { width:auto; height:auto; max-width: 100%; max-height: 82vh; object-fit: contain; display:block; border-radius:6px; background:#ffffff; z-index: 1; }
+/* Keep controls always above the image and big enough for touch */
+.lightbox-close, .lightbox-prev, .lightbox-next { position:absolute; background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; color: #0f172a; width: 44px; height: 44px; border-radius: 999px; display: grid; place-items: center; cursor: pointer; z-index: 2; }
 .lightbox-prev, .lightbox-next { top: 50%; transform: translateY(-50%); }
 .lightbox-prev { left: 8px; }
 .lightbox-next { right: 8px; }
@@ -106,8 +109,9 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
   .headline { font-size: clamp(20px, 6vw, 26px); margin: 10px 0 8px; }
   .subhead { font-size: 14px; line-height: 1.6; padding: 0 4px; }
   .hero-points { gap: 8px; }
-  .chip { padding: 4px 8px; font-size: 11px; }
-  .chip svg { width:12px; height:12px; }
+  /* Bigger badges on small mobiles */
+  .chip { padding: 8px 12px; font-size: 13px; }
+  .chip svg { width:16px; height:16px; }
   .product-grid { grid-template-columns: 1fr; }
   .product-media { height: clamp(150px, 45vw, 220px); }
   /* Align skeleton media height with actual media on small screens */
@@ -116,4 +120,11 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
   .product-title { font-size: 15px; }
   .product-subtitle, .product-desc { font-size: 12px; }
   .result-value { font-size: 18px; }
+  /* Lightbox tweaks for better mobile experience */
+  .lightbox-content { width: 96vw; max-height: 86vh; padding: 6px; }
+  .lightbox-img { max-width: 100%; max-height: 78vh; }
+  .lightbox-prev, .lightbox-next, .lightbox-close { width: 48px; height: 48px; }
+  .lightbox-prev { left: 6px; }
+  .lightbox-next { right: 6px; }
+  .lightbox .logo-overlay { width: 48px; height: 48px; padding: 6px; }
 }
