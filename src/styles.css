@@ -111,7 +111,7 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
   .hero-points { gap: 8px; }
   /* Bigger badges on small mobiles */
   .chip { padding: 8px 12px; font-size: 13px; }
-  .chip svg { width:18px; height:18px; }
+  .chip svg { width:20px; height:20px; }
   .product-grid { grid-template-columns: 1fr; }
   .product-media { height: clamp(150px, 45vw, 220px); }
   /* Align skeleton media height with actual media on small screens */
