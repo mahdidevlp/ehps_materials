@@ -25,11 +25,13 @@ export function ProductGrid() {
   }, [])
 
   if (isLoading) {
-    const count = Math.max(6, PRODUCT_CATALOG.length)
+    const skeletonKeys = (PRODUCT_CATALOG.length
+      ? PRODUCT_CATALOG.map(p => p.key)
+      : Array.from({ length: 6 }, (_, i) => `skeleton-${i}`))
     return (
       <div id="product-grid" className="product-grid">
-        {Array.from({ length: count }).map((_, idx) => (
-          <article key={idx} className="skeleton-card product-card">
+        {skeletonKeys.map((key) => (
+          <article key={key} className="skeleton-card product-card">
             <div className="carousel">
               <div className="skeleton skeleton-media" />
             </div>

@@ -110,6 +110,8 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
   .chip svg { width:12px; height:12px; }
   .product-grid { grid-template-columns: 1fr; }
   .product-media { height: clamp(150px, 45vw, 220px); }
+  /* Align skeleton media height with actual media on small screens */
+  .skeleton-media { height: clamp(150px, 45vw, 220px); }
   .carousel-btn { width: 32px; height: 32px; }
   .product-title { font-size: 15px; }
   .product-subtitle, .product-desc { font-size: 12px; }
