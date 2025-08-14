@@ -11,7 +11,7 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
 .hero-points { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin-top:14px; }
 .chip { display:inline-flex; align-items:center; gap:10px; background:#ffffff; border:1px solid #e5e7eb; color:#0f172a; padding:10px 14px; border-radius:999px; font-size:15px; font-weight:800; box-shadow:0 2px 8px rgba(0,0,0,0.06); }
 .chip:hover { border-color:#cfe6f8; box-shadow:0 4px 12px rgba(2,132,199,0.12); }
-.chip svg { width:18px; height:18px; }
+.chip svg { width:20px; height:20px; }
 
 .container { max-width: 1200px; margin: 0 auto; padding-left: 12px; padding-right: 12px; }
 .product-grid { display:grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap:16px; margin-top: 24px; }
@@ -36,7 +36,7 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
 .product-media { width: 100%; height: clamp(200px, 30vw, 320px); object-fit: cover; display: block; background: #ffffff; cursor: zoom-in; }
 .carousel { position: relative; overflow: hidden; border-bottom: 1px solid #eef2f7; background: #fff; }
 .logo-overlay { position:absolute; top:8px; left:8px; width:40px; height:40px; padding:4px; background: rgba(255,255,255,0.9); border:1px solid #e5e7eb; border-radius:10px; pointer-events:none; }
-.lightbox .logo-overlay { top:10px; left:10px; width:72px; height:72px; padding:8px; }
+.lightbox .logo-overlay { top:10px; left:10px; width:72px; height:72px; padding:8px; z-index: 2; }
 .carousel-btn { position:absolute; top:50%; transform: translateY(-50%); background: rgba(255,255,255,0.9); border: 1px solid #e5e7eb; color: #0f172a; width: 36px; height: 36px; border-radius: 999px; display: grid; place-items: center; cursor: pointer; }
 .carousel-btn:hover { background: #ffffff; }
 .carousel-prev { left: 10px; }
@@ -111,7 +111,7 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
   .hero-points { gap: 8px; }
   /* Bigger badges on small mobiles */
   .chip { padding: 8px 12px; font-size: 13px; }
-  .chip svg { width:16px; height:16px; }
+  .chip svg { width:18px; height:18px; }
   .product-grid { grid-template-columns: 1fr; }
   .product-media { height: clamp(150px, 45vw, 220px); }
   /* Align skeleton media height with actual media on small screens */
