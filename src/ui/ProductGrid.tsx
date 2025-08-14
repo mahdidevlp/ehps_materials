@@ -30,7 +30,9 @@ export function ProductGrid() {
       <div id="product-grid" className="product-grid">
         {Array.from({ length: count }).map((_, idx) => (
           <article key={idx} className="skeleton-card product-card">
-            <div className="skeleton skeleton-media" />
+            <div className="carousel">
+              <div className="skeleton skeleton-media" />
+            </div>
             <div className="product-right">
               <div className="product-body">
                 <div className="skeleton title" style={{ width: '70%' }} />
@@ -38,12 +40,19 @@ export function ProductGrid() {
                 <div className="card-meta" style={{ marginTop: 10 }}>
                   <div className="meta-dots" />
                 </div>
+                <div className="skeleton text" style={{ marginTop: 8, width: '90%' }} />
+                <div className="skeleton text" style={{ marginTop: 6, width: '80%' }} />
+                <div className="desc-dots"></div>
                 <ul className="product-specs">
                   <li><div className="skeleton text" style={{ height: 10 }} /></li>
                   <li><div className="skeleton text" style={{ height: 10 }} /></li>
                 </ul>
               </div>
               <div className="product-footer">
+                <div className="details">
+                  <div className="skeleton text" style={{ height: 14, width: '60%' }} />
+                  <div className="skeleton text" style={{ height: 14, width: '40%', marginTop: 6 }} />
+                </div>
                 <div className="skeleton text" style={{ height: 36, borderRadius: 10 }} />
               </div>
             </div>
