@@ -111,13 +111,7 @@ body { margin:0; font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI,
   .hero-points { gap: 8px; }
   /* Bigger badges on small mobiles */
   .chip { padding: 8px 12px; font-size: 13px; }
-  .chip svg { width:22px; height:22px; shape-rendering: geometricPrecision; }
-  /* Keep strokes crisp and slightly thicker on small screens */
-  .chip svg path,
-  .chip svg circle,
-  .chip svg line,
-  .chip svg polyline,
-  .chip svg polygon { vector-effect: non-scaling-stroke; stroke-width: 2.6px; }
+  .chip svg { width:24px; height:24px; }
   .product-grid { grid-template-columns: 1fr; }
   .product-media { height: clamp(150px, 45vw, 220px); }
   /* Align skeleton media height with actual media on small screens */
